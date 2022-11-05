@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SLICING</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg bg-transparant fixed-top"></nav>
+    <!-- end navigation -->
+
+    <!-- jumbotron -->
+    <div class="jumbotron overflow-hidden"></div>
+    <!-- end jumbotron -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+      $("nav").load("pages/navigation.html");
+      $(".jumbotron").load("pages/landingpage.html");
+
+      window.addEventListener("click", (e) => {
+        if (e.target.id == "home") {
+          $(".jumbotron").load("pages/landingpage.html");
+        } else if (e.target.id == "product") {
+          $(".jumbotron").load("pages/product.html");
+        } else if (e.target.id == "services") {
+          $(".jumbotron").load("pages/services.html");
+        } else if (e.target.id == "contact") {
+          $(".jumbotron").load("pages/contact.html");
+        } else if (e.target.id == "login") {
+          $(".jumbotron").load("login-form/login.html");
+        }
+      });
+    </script>
+  </body>
+</html>
